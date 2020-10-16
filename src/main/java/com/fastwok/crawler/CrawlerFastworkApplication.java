@@ -17,14 +17,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @Slf4j
 @EnableScheduling
-public class CrawlerFastworkApplication implements CommandLineRunner {
+public class CrawlerFastworkApplication {
     public static void main(String[] args) {
         SpringApplication.run(CrawlerFastworkApplication.class, args);
     }
-    @Autowired
-    CreateTaskService createTaskService;
-    @Override
-    public void run(String... args) throws Exception {
-        createTaskService.getData();
-    }
+
 }

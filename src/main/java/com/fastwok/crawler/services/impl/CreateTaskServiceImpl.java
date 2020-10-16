@@ -26,7 +26,7 @@ public class CreateTaskServiceImpl implements CreateTaskService {
     @Override
     public void getData() throws UnirestException, MessagingException {
         Date date = new Date();
-        Date tomorrow = new Date(date.getTime() - 986400000);
+        Date tomorrow = new Date(date.getTime() - 86400000);
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         String strDate = formatter.format(tomorrow);
         List<User> users=userRepository.getByDate(strDate);
